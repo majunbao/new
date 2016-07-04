@@ -1,0 +1,41 @@
+#!/usr/bin/env bash
+
+NAME="uicss"
+DIR=".new"
+UICSS="https://codeload.github.com/majunbao/uicss/zip/master"
+UICSS_DIR="uicss-master"
+CACHE_DIR=~/$DIR
+
+if [[ "clear" = $1 ]]; then
+  rm -rf $CACHE_DIR
+  exit 0;
+fi
+
+
+if [[ "" != $1 ]]; then
+  NAME=$1
+fi
+
+if [ ! -d $CACHE_DIR ]; then
+  echo $CACHE_DIR
+  mkdir $CACHE_DIR
+fi
+
+# 预清理
+rm -rf $CACHE_DIR/$NAME.zip $CACHE_DIR/$NAME
+
+# 下载 缓存
+curl -# -o $CACHE_DIR/$NAME.zip $UICSS
+
+# 解压
+unzip -qo $CACHE_DIR/$NAME.zip -d $CACHE_DIR/$NAME
+
+# 清理
+mv $CACHE_DIR/$NAME/$UICSS_DIR/* $CACHE_DIR/$NAME && rm -r $CACHE_DIR/$NAME/$UICSS_DIR
+
+# 生成项目
+cp -r $CACHE_DIR/$NAME ./
+
+# 输出日志
+printf ""$NAME"\n"
+ls $NAME | sed "s:^:  ├──:"
