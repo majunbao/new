@@ -11,12 +11,12 @@ new [clear]  清除用户缓存文件
 
 ### npm
 
-```javascript
+```
 npm install -g new-cli
 ```
 
 ### sh
 
-```sh
+```
 curl -o /usr/local/bin https://raw.githubusercontent.com/majunbao/new/master/new
 ```
