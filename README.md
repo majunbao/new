@@ -4,8 +4,8 @@
 
 ## Dcos
 
-new [name]   新建一个项目，名称为name
-new [clear]  清除用户缓存文件
+> new [name]   新建一个项目，名称为name
+> new [clear]  清除用户缓存文件
 
 ## Install
 
