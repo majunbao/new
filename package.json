@@ -1,8 +1,7 @@
 {
   "name": "new-cli",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +14,8 @@
   "bugs": {
     "url": "https://github.com/majunbao/new/issues"
   },
-  "homepage": "https://github.com/majunbao/new#readme"
+  "homepage": "https://github.com/majunbao/new#readme",
+  "bin": {
+    "new": "./new"
+  }
 }
