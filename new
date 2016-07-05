@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+VISITION=1.0.3
 NAME="uicss"
 DIR=".new"
 UICSS="https://codeload.github.com/majunbao/uicss/zip/master"
@@ -12,7 +13,11 @@ if [[ "clear" = $1 ]]; then
 fi
 
 
-if [[ "" != $1 ]]; then
+if [[ "" = $1 ]]; then
+  echo "  new [name]   新建一个项目，名称为name"
+  echo "  new [clear]  清除用户缓存文件"
+  exit 0;
+else
   NAME=$1
 fi
 
