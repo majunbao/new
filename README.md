@@ -1,6 +1,6 @@
 # new
 
-开始一个web项目，通过简单地命令。
+开始一个web项目，通过简单地命令。采用[uicss](https://github.com/majunbao/uicss)框架。
 
 ## Install
 
